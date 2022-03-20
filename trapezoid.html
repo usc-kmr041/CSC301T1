@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Trapezoid</title>
+    <script type='text/javascript' src='script.js'></script>
+</head>
+
+<body>
+<h1>Calculate the area of a trapezoid</h1>
+<img src='images/trapezoid.jpg'><br><br>
+<label id = 'answer'></label><br><br>
+
+<label id = 'SelectedUnit'></label>
+<br><br>
+
+<select name='units' id = 'units'>
+    <option value='' selected disabled hidden>What unit do you want to use?</option>
+    <option value='inches'>Inches</option>
+    <option value='centimeters'>Centimeters</option>
+  </select><br><br>
+
+
+Base1: <input type ='text' id = 'base1'><br><br>
+Base2: <input type = 'text' id = 'base2'><br><br>
+Height: <input type ='text' id = 'height'><br><br>
+
+<input type = 'submit' value = 'Calculate' onclick = 'calculateTrapezoid()'>
+<br><br>
+<form action='index.html'>
+    <input type='submit' value='Reset' />
+</form>
+
+<button onclick='displayHistory()'>Toggle Display History</button>
+
+<script>
+    let myArray = [];
+    let i = 0;
+
+</script>
+
+<div id='history' style.display = 'block' >
+    the history is shown<br>
+    <label id = 'answerhistory'></label><br><br>
+    <label id = 'historyList'></label><br><br>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Square</title>
+    <script type='text/javascript' src='script.js'></script>
+</head>
+
+<body>
+<h1>Calculate the area of a square/rectangle</h1>
+<img src='images/square.jpg'><br><br>
+<label id = 'answer'></label>
+<label id = 'SelectedUnit'></label>
+<br><br>
+
+<select name='units' id = 'units'>
+    <option value='' selected disabled hidden>What unit do you want to use?</option>
+    <option value='inches'>Inches</option>
+    <option value='centimeters'>Centimeters</option>
+  </select><br><br>
+
+Length: <input type ='text' id = 'length'><br><br>
+Width: <input type ='text' id = 'width'><br><br>
+<input type = 'submit' value = 'Calculate' onclick = 'calculateSquare()'>
+<form action='index.html'><br>
+    <input type='submit' value='Reset' />
+</form>
+
+<script>
+    let myArray = [];
+    let i = 0;
+    document.addEventListener('DOMContentLoaded', () => {
+        document
+        .getElementById('units')
+        .addEventListener('input',handleSelect);
+    });
+    
+    function handleSelect(event){
+        let selectedUnit = event.target;
+        console.log(selectedUnit.value);
+    }
+</script>
+
+<button onclick='displayHistory()'>Toggle Display History</button>
+
+<div id='history' style.display = 'block' >
+    the history is shown<br>
+    <label id = 'answerhistory'></label><br><br>
+    <label id = 'historyList'></label><br><br>
+</div>
+
+</body>
+</html>
